@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "event_type": "Corporate Seminar",
+    "price": "$5,000 to $15,000",
+    "capacity": "50 to 200",
+    "registration_deadline": "60 days before",
+    "refund_deadline": "30 days before",
+    "description": "Join us for an enlightening Corporate Seminar designed to broaden your knowledge and expertise. This event offers a diverse range of topics and insights, with a capacity for 50 to 200 participants. The registration deadline is 60 days before the event, allowing you ample time to secure your spot. We understand that plans may change, so we offer refunds up to 30 days before the Seminar.",
+    "features": [
+      "Diverse range of topics and insights",
+      "Capacity for 50 to 200 participants",
+      "Registration deadline 60 days before the event"
+    ],
+    "thumbnail": "https://example.com/corporate_seminar_thumbnail.jpg",
+    "images": [
+      "https://example.com/corporate_seminar_image1.jpg",
+      "https://example.com/corporate_seminar_image2.jpg"
+    ],
+    "details": "Broaden knowledge at our Corporate Seminar with diverse topics. Capacity: 50-200. Register 60 days in advance."
+  },
+  {
+    "id": 2,
+    "event_type": "Corporate Trade Expo",
+    "price": "$50,000 to $1,000,000",
+    "capacity": "500 to 2,000",
+    "registration_deadline": "180 days before",
+    "refund_deadline": "90 days before",
+    "description": "Experience the bustling world of commerce at our Corporate Trade Expo, where businesses gather to showcase their products and innovations. With a capacity ranging from 500 to 2,000 attendees, this event promises networking opportunities galore. To ensure your participation, register early as the deadline is 180 days before the Expo. For flexibility, refunds are available up to 90 days before the event.",
+    "features": [
+      "Opportunity to showcase products and innovations",
+      "Capacity ranging from 500 to 2,000 attendees",
+      "Registration deadline 180 days before the event"
+    ],
+    "thumbnail": "https://example.com/corporate_trade_expo_thumbnail.jpg",
+    "images": [
+      "https://example.com/corporate_trade_expo_image1.jpg",
+      "https://example.com/corporate_trade_expo_image2.jpg"
+    ],
+    "details": "Explore commerce at our Corporate Trade Expo. Capacity: 500-2,000. Register 180 days in advance."
+  },
+  {
+    "id": 3,
+    "event_type": "Corporate Team Building Workshop",
+    "price": "$3,000 to $7,000",
+    "capacity": "10 to 50",
+    "registration_deadline": "30 days before",
+    "refund_deadline": "15 days before",
+    "description": "Strengthen your team's bonds and productivity at our Corporate Team Building Workshop. Designed for intimate groups of 10 to 50 participants, this event fosters collaboration and growth. Secure your spot by registering 30 days before the workshop, and if circumstances change, you can request a refund up to 15 days prior.",
+    "features": [
+      "Fosters collaboration and team bonding",
+      "Designed for groups of 10 to 50 participants",
+      "Registration deadline 30 days before the event"
+    ],
+    "thumbnail": "https://example.com/corporate_team_building_workshop_thumbnail.jpg",
+    "images": [
+      "https://example.com/corporate_team_building_workshop_image1.jpg",
+      "https://example.com/corporate_team_building_workshop_image2.jpg"
+    ],
+    "details": "Boost teamwork at our Corporate Team Building Workshop. Capacity: 10-50. Register 30 days in advance."
+  },
+  {
+    "id": 4,
+    "event_type": "Corporate Product Launches",
+    "price": "$15,000 to $50,000",
+    "capacity": "50 to 500",
+    "registration_deadline": "180 days before",
+    "refund_deadline": "90 days before",
+    "description": "Witness innovation and groundbreaking products at our Corporate Product Launches event. With a capacity for 50 to 500 attendees, this event is ideal for industry professionals. Register early, as the deadline is 180 days before the event. For peace of mind, we offer refunds up to 90 days in advance.",
+    "features": [
+      "Showcases groundbreaking products and innovations",
+      "Capacity for 50 to 500 attendees",
+      "Registration deadline 180 days before the event"
+    ],
+    "thumbnail": "https://example.com/corporate_product_launches_thumbnail.jpg",
+    "images": [
+      "https://example.com/corporate_product_launches_image1.jpg",
+      "https://example.com/corporate_product_launches_image2.jpg"
+    ],
+    "details": "Discover innovation at our Corporate Product Launches. Capacity: 50-500. Register 180 days in advance."
+  },
+  {
+    "id": 5,
+    "event_type": "Corporate Meetings",
+    "price": "$2,000 to $7,000",
+    "capacity": "10 to 100",
+    "registration_deadline": "30 days before",
+    "refund_deadline": "15 days before",
+    "description": "Elevate your corporate gatherings at our Corporate Meetings. Accommodating 10 to 100 participants, these meetings are perfect for strategy sessions and discussions. Register 30 days before the event to secure your spot, and if necessary, request a refund up to 15 days before the meeting.",
+    "features": [
+      "Ideal for strategy sessions and discussions",
+      "Accommodates 10 to 100 participants",
+      "Registration deadline 30 days before the event"
+    ],
+    "thumbnail": "https://example.com/corporate_meetings_thumbnail.jpg",
+    "images": [
+      "https://example.com/corporate_meetings_image1.jpg",
+      "https://example.com/corporate_meetings_image2.jpg"
+    ],
+    "details": "Enhance corporate gatherings at our Corporate Meetings. Capacity: 10-100. Register 30 days in advance."
+  },
+  {
+    "id": 6,
+    "event_type": "Corporate Award Ceremonies",
+    "price": "$20,000 to $75,000",
+    "capacity": "100 to 500",
+    "registration_deadline": "90 days before",
+    "refund_deadline": "45 days before",
+    "description": "Celebrate excellence at our prestigious Corporate Award Ceremonies. With a capacity ranging from 100 to 500 attendees, this event honors outstanding achievements. Register early, as the deadline is 90 days before the ceremony. In case plans change, we offer refunds up to 45 days before the event.",
+    "features": [
+      "Honors outstanding achievements and excellence",
+      "Capacity ranging from 100 to 500 attendees",
+      "Registration deadline 90 days before the event"
+    ],
+    "thumbnail": "https://example.com/corporate_award_ceremonies_thumbnail.jpg",
+    "images": [
+      "https://example.com/corporate_award_ceremonies_image1.jpg",
+      "https://example.com/corporate_award_ceremonies_image2.jpg"
+    ],
+    "details": "Celebrate excellence at our Corporate Award Ceremonies. Capacity: 100-500. Register 90 days in advance."
+  }
+]
