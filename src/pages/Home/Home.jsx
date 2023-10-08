@@ -1,10 +1,12 @@
+import Banner from "../../components/Banner/Banner";
 import Footer from "../../shared/Footer/Footer";
 
 const Home = () => {
   return (
-    <div>
+    <div className="space-y-4">
       <p>home</p>
-      <Footer />
+      <Banner/>
+      <Footer/>
     </div>
   );
 };
