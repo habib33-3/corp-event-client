@@ -7,9 +7,31 @@ import {
   AiOutlineEyeInvisible,
 } from "react-icons/ai";
 import { useState } from "react";
+import useAuthInfo from "./../../hooks/useAuthInfo";
+import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 const Registration = () => {
   const [passwordShow, setPasswordShow] = useState(false);
+  const { createUser } = useAuthInfo();
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    if (!/^(?=.*[A-Z])(?=.*[\W_]).{6,}$/.test(password)) {
+      return toast.error("wrong");
+    }
+
+    createUser(email, password)
+      .then((res) => {
+        console.log(res.user);
+        toast.success("Registration Successful");
+      })
+      .catch((err) => toast.error(err.message));
+  };
 
   return (
     <div>
@@ -19,6 +41,7 @@ const Registration = () => {
           <form
             className="space-y-3"
             action=""
+            onSubmit={handleRegister}
           >
             <div className="form-control ">
               <label className=" flex text-2xl items-center gap-2">
@@ -27,6 +50,7 @@ const Registration = () => {
               </label>
               <input
                 type="email"
+                name="email"
                 placeholder="email"
                 className="input input-bordered"
                 required
@@ -39,6 +63,7 @@ const Registration = () => {
               </label>
               <input
                 type="text"
+                name="name"
                 placeholder="name"
                 className="input input-bordered"
                 required
@@ -51,6 +76,7 @@ const Registration = () => {
               </label>
               <input
                 type="text"
+                name="picture"
                 placeholder="Picture URL"
                 className="input input-bordered"
                 required
@@ -64,6 +90,7 @@ const Registration = () => {
               <input
                 type={passwordShow ? "text" : "password"}
                 placeholder="Password"
+                name="password"
                 className="input input-bordered"
                 required
               />
@@ -81,6 +108,16 @@ const Registration = () => {
               Register
             </button>
           </form>
+
+          <p className="text-center mt-3">
+            Already have an account, please 
+            <Link
+              to="/login"
+              className="text-blue-600 mx-1 font-bold"
+            >
+              login
+            </Link>
+          </p>
         </div>
       </div>
     </div>
