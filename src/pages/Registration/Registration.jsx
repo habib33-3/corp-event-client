@@ -10,6 +10,7 @@ import { useState } from "react";
 import useAuthInfo from "./../../hooks/useAuthInfo";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
+import GoogleLogin from "../../components/GoogleLogin";
 
 const Registration = () => {
   const [passwordShow, setPasswordShow] = useState(false);
@@ -22,7 +23,9 @@ const Registration = () => {
     const password = e.target.password.value;
 
     if (!/^(?=.*[A-Z])(?=.*[\W_]).{6,}$/.test(password)) {
-      return toast.error("wrong");
+      return toast.error(
+        `The password must be 6 characters long and include at least one capital letter and one special character.`
+      );
     }
 
     createUser(email, password)
@@ -110,7 +113,7 @@ const Registration = () => {
           </form>
 
           <p className="text-center mt-3">
-            Already have an account, please 
+            Already have an account, please
             <Link
               to="/login"
               className="text-blue-600 mx-1 font-bold"
@@ -119,6 +122,7 @@ const Registration = () => {
             </Link>
           </p>
         </div>
+        <GoogleLogin />
       </div>
     </div>
   );
