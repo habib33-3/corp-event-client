@@ -1,6 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
+import useAuthInfo from "./../../hooks/useAuthInfo";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
+  const { user, logOut } = useAuthInfo();
+
+  const handleLogOut = () => {
+    logOut().then(toast.success("logout successfully"));
+  };
+
   const navLinks = (
     <>
       <li>
@@ -40,13 +48,74 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <a className="btn btn-ghost normal-case text-xl">CorpEvent</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          <Link to="/login">login</Link>
+          <div className="hidden lg:block">
+            {user ? (
+              <div className="flex items-center gap-1">
+                <p className="text-lg font-semibold text-center">
+                  {user.displayName}
+                </p>
+                <img
+                  src={user.photoURL}
+                  alt="user img"
+                  className="w-10 h-10 rounded-full"
+                />
+                <button
+                  onClick={handleLogOut}
+                  className="btn btn-warning"
+                >
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <Link
+                className="btn btn-warning"
+                to="/login"
+              >
+                login
+              </Link>
+            )}
+          </div>
+          <div>
+            {user ? (
+              <details className="dropdown mr-8">
+                <summary className="m-1 btn">
+                  <img
+                    src={user.photoURL}
+                    alt="user img"
+                    className="w-10 h-10 rounded-full"
+                  />
+                </summary>
+                <ul className="p-1 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-max ">
+                  <li>
+                    <p className="text-lg font-semibold text-center">
+                      {user.displayName}
+                    </p>
+                  </li>
+                  <li>
+                    <button
+                      onClick={handleLogOut}
+                      className="btn btn-sm w-max btn-warning"
+                    >
+                      Logout
+                    </button>
+                  </li>
+                </ul>
+              </details>
+            ) : (
+              <Link
+                className="btn btn-warning"
+                to="/login"
+              >
+                login
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </div>
