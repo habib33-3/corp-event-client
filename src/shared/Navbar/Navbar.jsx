@@ -81,7 +81,7 @@ const Navbar = () => {
               </Link>
             )}
           </div>
-          <div>
+          <div className="lg:hidden">
             {user ? (
               <details className="dropdown mr-8">
                 <summary className="m-1 btn">
