@@ -1,4 +1,5 @@
 import Banner from "../../components/Banner/Banner";
+import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
 import Footer from "../../shared/Footer/Footer";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div className="space-y-4">
       <p>home</p>
       <Banner/>
+      <WhyChooseUs/>
       <Footer/>
     </div>
   );

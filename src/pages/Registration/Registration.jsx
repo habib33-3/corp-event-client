@@ -14,11 +14,12 @@ import GoogleLogin from "../../components/GoogleLogin";
 
 const Registration = () => {
   const [passwordShow, setPasswordShow] = useState(false);
-  const { createUser } = useAuthInfo();
+  const { createUser, updateUser } = useAuthInfo();
 
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
+    const img = e.target.picture.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
 
@@ -29,8 +30,8 @@ const Registration = () => {
     }
 
     createUser(email, password)
-      .then((res) => {
-        console.log(res.user);
+      .then(() => {
+        updateUser(name, img).then(() => {});
         toast.success("Registration Successful");
       })
       .catch((err) => toast.error(err.message));
