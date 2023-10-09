@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <div className="w-11/12 mx-auto">
+    <div className="w-full lg:w-11/12 mx-auto">
       <div
         className="hero min-h-screen"
         style={{

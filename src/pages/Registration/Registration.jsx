@@ -39,7 +39,7 @@ const Registration = () => {
 
   return (
     <div>
-      <div className="card shadow-xl p-5 w-2/5 mx-auto bg-sky-100">
+      <div className="card shadow-xl p-5 w-full lg:w-2/5 mx-auto bg-sky-100">
         <h2 className="text-center text-4xl font-bold">Sign Up</h2>
         <div className="card bg-blue-100 p-3 w-[95%] mx-auto mt-8">
           <form
