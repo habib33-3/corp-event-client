@@ -5,6 +5,7 @@ import Registration from "../pages/Registration/Registration";
 import Login from "../pages/Login/Login";
 import ErrorPage from "../pages/Error/ErrorPage";
 import Career from "../pages/Career/Career";
+import Booking from "../pages/Booking/Booking";
 import EventDetails from "./../pages/EventDetails/EventDetails";
 
 const router = createBrowserRouter([
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
         path: "/details/:id",
         element: <EventDetails />,
         loader: () => fetch("/data.json"),
+      },
+
+      {
+        path: "/booking",
+        element: <Booking />,
       },
     ],
   },
