@@ -1,12 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import GoogleLogin from "../../components/GoogleLogin";
 import { useState } from "react";
-import {
-  AiOutlineUser,
-  AiFillPicture,
-  AiOutlineEye,
-  AiOutlineEyeInvisible,
-} from "react-icons/ai";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import useAuthInfo from "./../../hooks/useAuthInfo";
 import toast from "react-hot-toast";
 import { HiMail } from "react-icons/hi";
@@ -15,13 +10,17 @@ import { BsKeyFill } from "react-icons/bs";
 const Login = () => {
   const [passwordShow, setPasswordShow] = useState(false);
   const { logIn } = useAuthInfo();
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     logIn(email, password)
-      .then(() => toast.success("Login successful"))
+      .then(() => {
+        toast.success("Login successful");
+        navigate("/");
+      })
       .catch((err) => toast.error(err.message));
   };
 

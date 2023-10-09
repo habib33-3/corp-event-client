@@ -7,6 +7,7 @@ import ErrorPage from "../pages/Error/ErrorPage";
 import Career from "../pages/Career/Career";
 import Booking from "../pages/Booking/Booking";
 import EventDetails from "./../pages/EventDetails/EventDetails";
+import PrivateRouter from "./Private/PrivateRouter";
 
 const router = createBrowserRouter([
   {
@@ -32,18 +33,31 @@ const router = createBrowserRouter([
 
       {
         path: "/career",
-        element: <Career />,
+
+        element: (
+          <PrivateRouter>
+            <Career />
+          </PrivateRouter>
+        ),
       },
 
       {
         path: "/details/:id",
-        element: <EventDetails />,
+        element: (
+          <PrivateRouter>
+            <EventDetails />
+          </PrivateRouter>
+        ),
         loader: () => fetch("/data.json"),
       },
 
       {
         path: "/booking",
-        element: <Booking />,
+        element: (
+          <PrivateRouter>
+            <Booking />
+          </PrivateRouter>
+        ),
       },
     ],
   },

@@ -9,12 +9,13 @@ import {
 import { useState } from "react";
 import useAuthInfo from "./../../hooks/useAuthInfo";
 import toast from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import GoogleLogin from "../../components/GoogleLogin";
 
 const Registration = () => {
   const [passwordShow, setPasswordShow] = useState(false);
   const { createUser, updateUser } = useAuthInfo();
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -33,6 +34,7 @@ const Registration = () => {
       .then(() => {
         updateUser(name, img).then(() => {});
         toast.success("Registration Successful");
+        navigate("/");
       })
       .catch((err) => toast.error(err.message));
   };
