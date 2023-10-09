@@ -100,9 +100,9 @@ const Navbar = () => {
                     className="w-10 h-10 rounded-full"
                   />
                 </summary>
-                <ul className="p-1 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-max ">
+                <ul className=" shadow menu  dropdown-content z-[1] bg-base-100 rounded-box w-max ">
                   <li>
-                    <p className="text-lg font-semibold text-center">
+                    <p className=" w-max">
                       {user.displayName}
                     </p>
                   </li>

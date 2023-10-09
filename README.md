@@ -1,9 +1,14 @@
-# React + Vite
+```sh
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```
 
-Currently, two official plugins are available:
+# CorpEvent
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# b8a9-event-management-habib33-3
+[https://corp-event.web.app/]
+
+Features:
+1. User can registration and login via email password.
+2. there is also login via google account implemented.
+3. User  can view the home page and event cards in it.
+4. Only a logged in user can see event details,booking page,and career page.
+5.logged in user can see their picture and name in  navbar.
