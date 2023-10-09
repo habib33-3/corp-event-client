@@ -5,6 +5,7 @@ import Registration from "../pages/Registration/Registration";
 import Login from "../pages/Login/Login";
 import ErrorPage from "../pages/Error/ErrorPage";
 import Career from "../pages/Career/Career";
+import EventDetails from "./../pages/EventDetails/EventDetails";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,12 @@ const router = createBrowserRouter([
       {
         path: "/career",
         element: <Career />,
+      },
+
+      {
+        path: "/details/:id",
+        element: <EventDetails />,
+        loader: () => fetch("/data.json"),
       },
     ],
   },
