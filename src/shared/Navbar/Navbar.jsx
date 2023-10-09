@@ -13,7 +13,28 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          className="text-2xl p-2 bg-sky-100 round-lg"
+          to="/"
+        >
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className="text-2xl p-2 bg-sky-100 round-lg"
+          to="/booking"
+        >
+          Book Event
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className="text-2xl p-2 bg-sky-100 round-lg"
+          to="/career"
+        >
+          Join Us
+        </NavLink>
       </li>
     </>
   );
@@ -39,7 +60,7 @@ const Navbar = () => {
           <a className="btn btn-ghost normal-case text-xl">CorpEvent</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+          <ul className="menu space-x-4 menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
           <div className="hidden lg:block">
